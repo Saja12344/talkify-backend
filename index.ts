@@ -238,7 +238,8 @@ app.post("/analyze-text", async (req, res) => {
     return res.status(500).json({ error: "Analysis failed" })
   }
 })
+const PORT = process.env.PORT || 4000;
 
-app.listen(4000, () => {
-  console.log("Backend running on http://localhost:4000")
-})
+app.listen(PORT, () => {
+  console.log(`Backend running on port ${PORT}`);
+});
